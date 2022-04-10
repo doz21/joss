@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.javaswift</groupId>
+  <artifactId>joss</artifactId>
+  <versioning>
+    <release>0.10.4.NOASL</release>
+    <versions>
+      <version>0.10.4.NOASL</version>
+    </versions>
+    <lastUpdated>20220410150134</lastUpdated>
+  </versioning>
+</metadata>
