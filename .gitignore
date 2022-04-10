@@ -1,9 +1,0 @@
-.project
-.classpath
-.settings
-.idea
-joss.iml
-target
-create-jar.sh
-src/main/java/nl/tweeenveertig/openstack/Main.java
-.DS_Store
