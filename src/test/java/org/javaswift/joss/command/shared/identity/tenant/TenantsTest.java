@@ -3,12 +3,10 @@ package org.javaswift.joss.command.shared.identity.tenant;
 import static junit.framework.Assert.fail;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
 import java.io.IOException;
-
-import org.codehaus.jackson.map.ObjectMapper;
 import org.javaswift.joss.exception.CommandException;
 import org.junit.Test;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class TenantsTest {
 

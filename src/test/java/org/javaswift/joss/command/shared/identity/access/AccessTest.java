@@ -3,19 +3,17 @@ package org.javaswift.joss.command.shared.identity.access;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.fail;
 import static org.javaswift.joss.command.shared.identity.access.ServiceCatalogBuilder.createServiceCatalog;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.codehaus.jackson.map.DeserializationConfig;
-import org.codehaus.jackson.map.ObjectMapper;
 import org.javaswift.joss.client.factory.TempUrlHashPrefixSource;
 import org.javaswift.joss.exception.CommandExceptionError;
 import org.javaswift.joss.exception.NotFoundException;
 import org.javaswift.joss.model.Access;
 import org.javaswift.joss.util.ClasspathTemplateResource;
 import org.junit.Test;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class AccessTest {
     
@@ -23,7 +21,7 @@ public class AccessTest {
     public void testUnmarshalling() throws IOException {
         String jsonString = new ClasspathTemplateResource("/sample-access.json").loadTemplate();
         ObjectMapper mapper = new ObjectMapper();
-        mapper.configure(DeserializationConfig.Feature.UNWRAP_ROOT_VALUE, true);
+        mapper.enable(DeserializationFeature.UNWRAP_ROOT_VALUE);
         Access access = mapper.readValue(jsonString, AccessTenant.class);
         assertEquals("a376b74fbdb64a4986cd3234647ff6f8", access.getToken());
         assertEquals("https://og.cloudvps.com:443/v1/AUTH_bfo000024", access.getInternalURL());

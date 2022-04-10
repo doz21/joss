@@ -1,11 +1,10 @@
 package org.javaswift.joss.command.shared.identity.access;
 
 import static org.junit.Assert.assertEquals;
-
-import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.map.ObjectMapper;
 import org.junit.Before;
 import org.junit.Test;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class KeystoneV3AccessTest {
 

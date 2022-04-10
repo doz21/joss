@@ -3,10 +3,9 @@ package org.javaswift.joss.command.shared.identity.access;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-import org.codehaus.jackson.JsonNode;
 import org.javaswift.joss.client.factory.TempUrlHashPrefixSource;
 import org.javaswift.joss.model.Access;
+import com.fasterxml.jackson.databind.JsonNode;
 
 public class KeystoneV3Access implements Access {
 
